@@ -1,5 +1,5 @@
 # Python IDE
-In-browser Python IDE, inspired by VS Code
+browser Python IDE, inspired by VS Code
 ---
 
 ## What it is
