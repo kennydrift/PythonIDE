@@ -12,9 +12,9 @@ The site runs a Python development environment in your browser using [Pyodide](h
 
 [Pyodide](https://pyodide.org) v0.23.4 | Runs Python in the browser via WebAssembly 
 
-Python 3.11 | The Python version bundled with Pyodide 0.23.4 
+[Python](https://www.python.org/downloads/release/python-3110/) 3.11 | The Python version bundled with Pyodide 0.23.4 
 
-CodeMirror 5.65.13 | Code editor with syntax highlighting 
+[CodeMirror](https://codemirror.net/5/doc/releases.html) 5.65.13 | Code editor with syntax highlighting 
 
 ## What is Pyodide?
 Pyodide is CPython compiled to [WebAssembly](https://webassembly.org/), which lets it run directly inside a browser tab. It supports most of the Python standard library and can install many PyPI packages at runtime via `micropip`.
@@ -58,9 +58,9 @@ Pyodide is CPython compiled to [WebAssembly](https://webassembly.org/), which le
 ## Browser Support
 
 Works in any modern browser that supports WebAssembly and Web Workers,
-Chrome 89+
-Firefox 89+
-Edge 89+
-Safari 15+
+- Chrome 89+
+- Firefox 89+
+- Edge 89+
+- Safari 15+
 
 ---
