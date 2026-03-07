@@ -14,7 +14,7 @@
 
 ### [Python](https://www.python.org/) IDE running natively in the browser using [Pyodide](https://pyodide.org/en/stable/) and [CodeMirror](https://codemirror.net/)
 
-Test out the demo using [this site]([https://example.com/](https://kennydrift.github.io/PythonIDE/)).
+Test out the demo using [this site](https://kennydrift.github.io/PythonIDE/).
 
 - Write and execute Python code
 - Manage files and folders
