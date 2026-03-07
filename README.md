@@ -7,7 +7,7 @@
 ![WebAssembly](https://img.shields.io/badge/WebAssembly-WASM-orange?logo=webassembly)
 ![Editor](https://img.shields.io/badge/Editor-CodeMirror-green)
 ![Runs In](https://img.shields.io/badge/Runs%20In-Browser-black)
-![License](https://img.shields.io/badge/License-MIT-lightgrey)
+![License](https://img.shields.io/badge/License-APACHE-lightgrey)
 
 [Python](https://www.python.org/) IDE running natively in the browser using [Pyodide](https://pyodide.org/en/stable/) and [CodeMirror](https://codemirror.net/)
 
@@ -87,6 +87,6 @@ This project is a [Python](https://www.python.org/downloads/release/python-3110/
 
 
 # License
-
 MIT License
 
+© 2026 KennyDrift under Apache License 2.0.
