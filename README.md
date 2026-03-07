@@ -64,10 +64,10 @@
 
 | Browser | Minimum Version |
 |---------|----------------|
-| Chrome | 89+ |
-| Firefox | 89+ |
-| Edge | 89+ |
-| Safari | 15+ |
+| `Chrome` | `89+` |
+| `Firefox` | `89+` |
+| `Edge` | `89+` |
+| `Safari` | `15+` |
 
 > [!WARNING]
 > Browsers require WebAssembly support and Web Workers for this project to work
