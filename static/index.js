@@ -829,7 +829,9 @@ document.getElementById("menuTerminal").onclick = e => {
 document.getElementById("menuHelp").onclick = e => {
   e.stopPropagation();
   showDropdown(e.target, [
-    { label: "GitHub", fn: () => window.open("https://github.com/kennydrift", "_blank") },
+    { label: "GitHub", fn: () => window.open("https://github.com/kennydrift/PythonIDE", "_blank") },
+    { label: "Python guide", fn: () => window.open("https://wiki.python.org/moin/BeginnersGuide", "_blank") },
+    { label: "Python guide", fn: () => window.open("https://wiki.python.org/moin/BeginnersGuide", "_blank") },
   ]);
 };
 
