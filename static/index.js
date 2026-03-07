@@ -831,7 +831,6 @@ document.getElementById("menuHelp").onclick = e => {
   showDropdown(e.target, [
     { label: "GitHub", fn: () => window.open("https://github.com/kennydrift/PythonIDE", "_blank") },
     { label: "Python guide", fn: () => window.open("https://wiki.python.org/moin/BeginnersGuide", "_blank") },
-    { label: "Python guide", fn: () => window.open("https://wiki.python.org/moin/BeginnersGuide", "_blank") },
   ]);
 };
 
