@@ -33,15 +33,15 @@ Keyboard shortcuts, Ctrl+Enter to run, Ctrl+S to save, Ctrl+Z/Y for undo/redo, e
 
 ## Limitations (ps, a lot)
 
-interactive input like, `input()` does not work since Pyodide has no real stdin, interactive input is not supported in this build
-Theres no internet access so `requests`, `urllib`, sockets, etc. will not work. Pyodide runs in a sandboxed WebAssembly environment
+interactive input like `input()` does not work since Pyodide has no real stdin,
+Theres no internet access so `requests`, `urllib`, sockets, etc. will not work.
 Files only exist in memory for the current session; closing or refreshing the tab loses all changes
 No package installation, this build does not include `micropip`, so third-party packages cannot be installed at runtime. 
 No `subprocess` or `os.system`
 No threading, Python's `threading` module is not functional in Pyodide
 Startup time, Pyodide (~10MB WebAssembly binary) takes a few seconds to load on first run, 
 Memory limits, very large data processing may hit browser memory limits
-Not all stdlib modules work such as modules that rely on OS-level calls (`socket`, `ssl`, `multiprocessing`, etc.) are unavailable or limited
+Not all stdlib modules work, such as modules that rely on OS-level calls are unavailable or limited
 
 ---
 
