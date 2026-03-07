@@ -1,66 +1,103 @@
-# Python IDE
-browser Python IDE, inspired by VS Code
----
+# Browser Python IDE
 
-## What it is
-
-The site runs a Python development environment in your browser using [Pyodide](https://pyodide.org), a port of CPython to WebAssembly. Includes syntax highlighting, a file explorer, tabbed editing, and a live output terminal, and file saving.
-
----
-
-## What It Uses
-
-[Pyodide](https://pyodide.org) v0.23.4 | Runs Python in the browser via WebAssembly 
-
-[Python](https://www.python.org/downloads/release/python-3110/) 3.11 | The Python version bundled with Pyodide 0.23.4 
-
-[CodeMirror](https://codemirror.net/5/doc/releases.html) 5.65.13 | Code editor with syntax highlighting 
-
-## What is Pyodide?
-Pyodide is CPython compiled to [WebAssembly](https://webassembly.org/), which lets it run directly inside a browser tab. It supports most of the Python standard library and can install many PyPI packages at runtime via `micropip`.
-
----
-
-## Capabilities
-
-- Run (most of) Python 3.11 entirely in the browser
-
-- Pyodide comes with some packages which can be found [here](https://pyodide.org/en/stable/usage/packages-in-pyodide.html)
-
-- Built-in File explorer with nested folders, create, rename, delete, and drag-and-drop options (inspired by VS code)
+<p align="center">
   
-- Syntax highlighting with multiple themes (Dracula, Monokai, Material, Nord, Solarized Dark, Ayu Dark, Gruvbox Dark, Tomorrow Night, Oceanic Next, One Dark)
-  
-- Saving/loading files to/from your computer
+![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
+![Pyodide](https://img.shields.io/badge/Pyodide-0.23.4-purple)
+![WebAssembly](https://img.shields.io/badge/WebAssembly-WASM-orange?logo=webassembly)
+![Editor](https://img.shields.io/badge/Editor-CodeMirror-green)
+![Runs In](https://img.shields.io/badge/Runs%20In-Browser-black)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
+
+[Python](https://www.python.org/) IDE running natively in the browser using [Pyodide](https://pyodide.org/en/stable/) and [CodeMirror](https://codemirror.net/)
 
 ---
 
-## Limitations (ps, a lot)
+# Overview
 
-- interactive input like `input()` does not work since Pyodide has no real stdin,
-- Theres no internet access so `requests`, `urllib`, sockets, etc. will not work.
-- Files only exist in memory for the current session; closing or refreshing the tab loses all changes
+This project is a [Python](https://www.python.org/downloads/release/python-3110/) IDE which runs in your brower using [Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) and [CodeMirror](https://codemirror.net/), allowing you to:
 
-- No package installation, this build does not include `micropip`, so third-party packages cannot be installed at runtime.
-
-- No `subprocess` or `os.system`
-
-- No threading, Python's `threading` module is not functional in Pyodide
-
-- Startup time, Pyodide (~10MB WebAssembly binary) takes a few seconds to load on first run,
-
-- Memory limits, very large data processing may hit browser memory limits
-
-- Not all stdlib modules work, such as modules that rely on OS-level calls are unavailable or limited
+- Write and execute Python code
+- Manage files and folders
+- View real-time output in a built-in terminal  
 
 ---
 
-## Browser Support
+# Apps
 
-Works in any modern browser that supports WebAssembly and Web Workers,
-- Chrome 89+
-- Firefox 89+
-- Edge 89+
-- Safari 15+
+| App | Version | use |
+|------------|--------|------|
+| [Python](https://www.python.org/downloads/release/python-3110/) | 3.11 | Runtime |
+| [Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) | 0.23.4 | Runs Python in WebAssembly |
+| [CodeMirror](https://codemirror.net/) | 5.65.13 | Code editor |
 
 ---
+
+# Features
+
+| Feature | Description |
+|---------|------------|
+| Python Runtime | Executes Python 3.11 code |
+| File Explorer | Manage folders and files|
+| Syntax Highlighting | Highleted Syntax |
+| Terminal | Streams output |
+| File Saving | Download files to your device |
+| File Loading | Import files from your device |
+| Theme Support | Switch between 10 themes |
+
+---
+
+# Editor Themes
+
+| Theme | Description |
+|-------|------------|
+| Dracula | Dark purple |
+| Monokai | Classic dark |
+| Material | Material-inspired dark |
+| Nord | Arctic color palette |
+| Solarized Dark | Low contrast dark |
+| Ayu Dark | Minimal dark |
+| Gruvbox Dark | Retro dark |
+| Tomorrow Night | Balanced dark |
+| Oceanic Next | Blue-toned dark |
+| One Dark | I dont know |
+
+---
+
+# Limitations
+
+> [IMPORTANT] Some Python functionality is restricted due to the browser environment:
+
+1. Interactive Input: `input()` is not supported
+2. No Internet Access: Network libraries like `requests` and `urllib` cannot be used
+3. No Package Installation: `micropip` is disabled; PyPI packages cannot be installed
+4. No System-Level Access* Modules like `subprocess` or `os.system` are unavailable
+5. No Threading: `threading` and `multiprocessing` do not work
+
+---
+
+# Browser Compatibility
+
+| Browser | Minimum Version |
+|---------|----------------|
+| Chrome | 89+ |
+| Firefox | 89+ |
+| Edge | 89+ |
+| Safari | 15+ |
+
+Requirements: WebAssembly support and Web Workers.
+
+---
+
+# Notes
+
+- The IDE mimics VS Code with tabs, a file tree, and themes.  
+- Real-time terminal output is supported via a custom Pyodide streaming setup.  
+- All project files exist in browser memory; save them to your device to keep your work.
+- Made by me, some parts by ChatGPT, Copilot, and Claude
+
+---
+
+# License
+
+MIT License — feel free to fork or contribute on GitHub.
