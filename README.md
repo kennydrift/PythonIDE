@@ -11,7 +11,7 @@
 
 [Python](https://www.python.org/) IDE running natively in the browser using [Pyodide](https://pyodide.org/en/stable/) and [CodeMirror](https://codemirror.net/)
 
----
+
 
 # Overview
 
@@ -21,22 +21,15 @@ This project is a [Python](https://www.python.org/downloads/release/python-3110/
 - Manage files and folders
 - View real-time output in a built-in terminal  
 
----
 
-# Apps
 
-| App | Version | use |
-|------------|--------|------|
-| [Python](https://www.python.org/downloads/release/python-3110/) | 3.11 | Runtime |
-| [Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) | 0.23.4 | Runs Python in WebAssembly |
-| [CodeMirror](https://codemirror.net/) | 5.65.13 | Code editor |
-
----
-
-# Features
+## Features
 
 | Feature | Description |
 |---------|------------|
+| [Python 3.11](https://www.python.org/downloads/release/python-3110/) | Runtime |
+| [Pyodide 0.23.4](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) | Runs Python in WebAssembly |
+| [CodeMirror 5.65.13](https://codemirror.net/) | Code editor |
 | Python Runtime | Executes Python 3.11 code |
 | File Explorer | Manage folders and files|
 | Syntax Highlighting | Highleted Syntax |
@@ -45,12 +38,19 @@ This project is a [Python](https://www.python.org/downloads/release/python-3110/
 | File Loading | Import files from your device |
 | Theme Support | Switch between 10 themes |
 
----
+> [!IMPORTANT]
+> ### Some Python functionality is restricted due to the browser environment
+> 1. Interactive Input: `input()` is not supported
+> 2. No Internet Access: Network libraries like `requests` and `urllib` cannot be used
+> 3. No Package Installation: `micropip` is disabled; PyPI packages cannot be installed
+> 4. No System-Level Access* Modules like `subprocess` or `os.system` are unavailable
+> 5. No Threading: `threading` and `multiprocessing` do not work
 
-# Editor Themes
+
+## Editor Themes
 
 | Theme | Description |
-|-------|------------|
+|---------|------------|
 | Dracula | Dark purple |
 | Monokai | Classic dark |
 | Material | Material-inspired dark |
@@ -62,21 +62,8 @@ This project is a [Python](https://www.python.org/downloads/release/python-3110/
 | Oceanic Next | Blue-toned dark |
 | One Dark | I dont know |
 
----
 
-# Limitations
-
-> [IMPORTANT] Some Python functionality is restricted due to the browser environment:
-
-1. Interactive Input: `input()` is not supported
-2. No Internet Access: Network libraries like `requests` and `urllib` cannot be used
-3. No Package Installation: `micropip` is disabled; PyPI packages cannot be installed
-4. No System-Level Access* Modules like `subprocess` or `os.system` are unavailable
-5. No Threading: `threading` and `multiprocessing` do not work
-
----
-
-# Browser Compatibility
+## Browser Compatibility
 
 | Browser | Minimum Version |
 |---------|----------------|
@@ -85,19 +72,21 @@ This project is a [Python](https://www.python.org/downloads/release/python-3110/
 | Edge | 89+ |
 | Safari | 15+ |
 
-Requirements: WebAssembly support and Web Workers.
+> [!WARNING]
+> Browsers require WebAssembly support and Web Workers for this project to work
 
----
 
-# Notes
 
-- The IDE mimics VS Code with tabs, a file tree, and themes.  
-- Real-time terminal output is supported via a custom Pyodide streaming setup.  
-- All project files exist in browser memory; save them to your device to keep your work.
-- Made by me, some parts by ChatGPT, Copilot, and Claude
+> [!NOTE]
+> 1. Interactive Input: `input()` is not supported
+> 2. No Internet Access: Network libraries like `requests` and `urllib` cannot be used
+> 3. No Package Installation: `micropip` is disabled; PyPI packages cannot be installed
+> 4. No System-Level Access* Modules like `subprocess` or `os.system` are unavailable
+> 5. No Threading: `threading` and `multiprocessing` do not work
 
----
+
 
 # License
 
-MIT License — feel free to fork or contribute on GitHub.
+MIT License
+
