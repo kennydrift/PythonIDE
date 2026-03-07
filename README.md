@@ -1,6 +1,4 @@
 # Browser Python IDE
-
-<p align="center">
   
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
 ![Pyodide](https://img.shields.io/badge/Pyodide-0.23.4-purple)
@@ -8,13 +6,13 @@
 ![Last Commit](https://img.shields.io/github/last-commit/kennydrift/PythonIDE)
 ![Repo Size](https://img.shields.io/github/repo-size/kennydrift/PythonIDE)
 
-[Python](https://www.python.org/) IDE running natively in the browser using [Pyodide](https://pyodide.org/en/stable/) and [CodeMirror](https://codemirror.net/)
+
 
 
 
 # Overview
 
-This project is a [Python](https://www.python.org/downloads/release/python-3110/) IDE which runs in your brower using [Pyodide](https://pyodide.org/en/stable/usage/packages-in-pyodide.html) and [CodeMirror](https://codemirror.net/), allowing you to:
+### [Python](https://www.python.org/) IDE running natively in the browser using [Pyodide](https://pyodide.org/en/stable/) and [CodeMirror](https://codemirror.net/)
 
 - Write and execute Python code
 - Manage files and folders
@@ -37,7 +35,7 @@ This project is a [Python](https://www.python.org/downloads/release/python-3110/
 | File Loading | Import files from your device |
 | Theme Support | Switch between 10 themes |
 
-> [!IMPORTANT]
+> [!WARNING]
 > ### Some Python functionality is restricted due to the browser environment
 > 1. Interactive Input: `input()` is not supported
 > 2. No Internet Access: Network libraries like `requests` and `urllib` cannot be used
@@ -75,13 +73,6 @@ This project is a [Python](https://www.python.org/downloads/release/python-3110/
 > Browsers require WebAssembly support and Web Workers for this project to work
 
 
-
-> [!NOTE]
-> 1. Interactive Input: `input()` is not supported
-> 2. No Internet Access: Network libraries like `requests` and `urllib` cannot be used
-> 3. No Package Installation: `micropip` is disabled; PyPI packages cannot be installed
-> 4. No System-Level Access* Modules like `subprocess` or `os.system` are unavailable
-> 5. No Threading: `threading` and `multiprocessing` do not work
 
 ## Demo
 
