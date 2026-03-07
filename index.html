@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Python IDE</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/hint/show-hint.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/dracula.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/monokai.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/material.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/nord.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/solarized.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/ayu-dark.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/gruvbox-dark.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/tomorrow-night-eighties.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/oceanic-next.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/theme/one-dark.min.css">
+
+<link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- Title bar -->
+  <div class="titlebar">
+    <div class="titlebar-menu">
+      <span id="menuFile">File</span>
+      <span id="menuEdit">Edit</span>
+      <span id="menuView">View</span>
+      <span id="menuTerminal">Terminal</span>
+      <span id="menuHelp">Help</span>
+    </div>
+    <div class="titlebar-title">Python IDE</div>
+  </div>
+
+  <div class="main">
+
+    <!-- Activity bar -->
+    <div class="activity-bar">
+      <div class="activity-icon active" id="explorerBtn" title="Explorer">📁</div>
+      <div class="activity-icon" id="extensionsBtn" title="Themes">🎨</div>
+    </div>
+
+    <!-- Extensions panel -->
+    <div id="extensionsPanel">
+      <strong>Color Theme</strong>
+      <div class="theme-option selected" data-theme="dracula">Dracula</div>
+      <div class="theme-option" data-theme="monokai">Monokai</div>
+      <div class="theme-option" data-theme="material">Material</div>
+      <div class="theme-option" data-theme="nord">Nord</div>
+      <div class="theme-option" data-theme="solarized dark">Solarized Dark</div>
+      <div class="theme-option" data-theme="ayu-dark">Ayu Dark</div>
+      <div class="theme-option" data-theme="gruvbox-dark">Gruvbox Dark</div>
+      <div class="theme-option" data-theme="tomorrow-night-eighties">Tomorrow Night</div>
+      <div class="theme-option" data-theme="oceanic-next">Oceanic Next</div>
+      <div class="theme-option" data-theme="one-dark">One Dark</div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">Explorer</div>
+      <div class="file-tree" id="fileTree"></div>
+    </div>
+
+    <!-- Sidebar resize handle -->
+    <div class="sidebar-resize" id="sidebarResize"></div>
+
+    <!-- Editor area -->
+    <div class="editor-area" id="editorArea">
+      <div class="tabs" id="tabs">
+        <div class="editor-placeholder" id="noTabsMsg" style="display:none;padding:6px 12px;height:35px;color:#666;font-size:12px;align-items:center;">
+          No file open
+        </div>
+      </div>
+
+      <div class="editor-and-output" id="editorAndOutput" style="flex:1;min-height:0;display:flex;flex-direction:column;">
+        <div class="editor-col" id="editorCol" style="flex:1;min-height:0;min-width:0;display:flex;flex-direction:column;">
+          <div class="editor-wrapper" id="editorWrapper">
+            <textarea id="editor"></textarea>
+          </div>
+
+          <div class="controls">
+            <div class="status-dot loading" id="statusDot"></div>
+            <span class="status-label" id="statusLabel">Loading Python…</span>
+            <button id="stopBtn" title="Stop execution">■ Stop</button>
+            <button id="runBtn" disabled title="Run (Ctrl+Enter)">▶</button>
+          </div>
+        </div>
+
+        <div class="resize-handle" id="resizeHandle"></div>
+
+        <div class="terminal" id="terminal">
+          <div class="terminal-header">
+            <span class="terminal-title">Output</span>
+            <button class="terminal-clear" id="clearBtn2">Clear</button>
+          </div>
+          <div class="terminal-body" id="output"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Context menu -->
+<div id="contextMenu"></div>
+
+<!-- CodeMirror -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/codemirror.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/mode/python/python.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/matchbrackets.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.13/addon/edit/closebrackets.min.js"></script>
+
+<script src="static/index.js"></script>
+
+</body>
+</html>
