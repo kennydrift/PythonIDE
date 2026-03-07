@@ -4,10 +4,9 @@
   
 ![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python&logoColor=white)
 ![Pyodide](https://img.shields.io/badge/Pyodide-0.23.4-purple)
-![WebAssembly](https://img.shields.io/badge/WebAssembly-WASM-orange?logo=webassembly)
-![Editor](https://img.shields.io/badge/Editor-CodeMirror-green)
-![Runs In](https://img.shields.io/badge/Runs%20In-Browser-black)
-![License](https://img.shields.io/badge/License-APACHE-lightgrey)
+![License](https://img.shields.io/github/license/kennydrift/PythonIDE)
+![Last Commit](https://img.shields.io/github/last-commit/kennydrift/PythonIDE)
+![Repo Size](https://img.shields.io/github/repo-size/kennydrift/PythonIDE)
 
 [Python](https://www.python.org/) IDE running natively in the browser using [Pyodide](https://pyodide.org/en/stable/) and [CodeMirror](https://codemirror.net/)
 
@@ -84,6 +83,9 @@ This project is a [Python](https://www.python.org/downloads/release/python-3110/
 > 4. No System-Level Access* Modules like `subprocess` or `os.system` are unavailable
 > 5. No Threading: `threading` and `multiprocessing` do not work
 
+## Demo
+
+Test out some defualt files using [this site](https://example.com/).
 
 
 # License
