@@ -77,6 +77,6 @@ Test out the demo using [this site](https://kennydrift.github.io/PythonIDE/).
 
 
 # License
-MIT License
+Apache License 2.0
 
 © 2026 KennyDrift under Apache License 2.0.
